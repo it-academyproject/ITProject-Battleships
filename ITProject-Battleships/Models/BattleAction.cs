@@ -22,5 +22,9 @@ namespace ITProject_Battleships.Models
         public virtual int PlayerId { get; set; }
 
         public virtual int BattleId { get; set; }
+
+        public virtual Player Player { get; set; }
+
+        public virtual Battle Battle { get; set; }
     }
 }

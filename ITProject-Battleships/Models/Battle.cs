@@ -26,5 +26,11 @@ namespace ITProject_Battleships.Models
         public virtual int BattleFieldId { get; set; }
 
         public virtual int ArmyId { get; set; }
+
+        public virtual Challenge Challenge { get; set; }
+
+        public virtual BattleField BattleField { get; set; }
+
+        public virtual Army Army { get; set; }
     }
 }
