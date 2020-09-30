@@ -20,9 +20,9 @@ namespace ITProject_Battleships.Models
 
         public int PositionY { get; set; }
 
-        public int PlayerId { get; set; }
+        public virtual int PlayerId { get; set; }
 
-        public int BattleId { get; set; }
+        public virtual int BattleId { get; set; }
 
     }
 }

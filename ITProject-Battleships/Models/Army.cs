@@ -14,6 +14,6 @@ namespace ITProject_Battleships.Models
 
         public ShipType ArmyShips { get; set; }
 
-        public int BattleFieldId { get; set; }
+        public virtual int BattleFieldId { get; set; }
     }
 }

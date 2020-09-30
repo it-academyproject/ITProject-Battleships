@@ -19,6 +19,8 @@ namespace ITProject_Battleships.Models
 
         public DateTime BattleMoment { get; set; }
 
-        public int PlayerId { get; set; }
+        public virtual int PlayerId { get; set; }
+
+        public virtual int BattleId { get; set; }
     }
 }

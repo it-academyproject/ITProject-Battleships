@@ -21,10 +21,10 @@ namespace ITProject_Battleships.Models
 
         public int Score2 { get; set; }
 
-        public int ChallengeId { get; set; }
+        public virtual int ChallengeId { get; set; }
 
-        public int BattleFieldId { get; set; }
+        public virtual int BattleFieldId { get; set; }
 
-        public int ArmyId { get; set; }
+        public virtual int ArmyId { get; set; }
     }
 }
