@@ -15,7 +15,7 @@ namespace ITProject_Battleships.Models
 
         public int PositionY { get; set; }
 
-        public int BattleResult { get; set; }
+        public bool BattleResult { get; set; }
 
         public DateTime BattleMoment { get; set; }
 
