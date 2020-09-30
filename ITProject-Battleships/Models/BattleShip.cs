@@ -24,9 +24,7 @@ namespace ITProject_Battleships.Models
 
         public virtual int BattleId { get; set; }
 
-        public virtual Player Player1 { get; set; }
-
-        public virtual Player Player2 { get; set; }
+        public virtual Player Player { get; set; }
 
         public virtual Battle Battle { get; set; }
 
