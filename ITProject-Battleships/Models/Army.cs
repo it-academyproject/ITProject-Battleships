@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ITProject_Battleships.Models.Enums;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace ITProject_Battleships.Models
         [Key]
         public int ArmyId { get; set; }
 
-        public int ArmyShips { get; set; }
+        public ShipType ArmyShips { get; set; }
 
         public int BattleFieldId { get; set; }
     }
