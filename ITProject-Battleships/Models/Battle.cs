@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -7,6 +8,7 @@ namespace ITProject_Battleships.Models
 {
     public class Battle
     {
+        [Key]
         public int BattleId { get; set; }
 
         public DateTime BattleBegin { get; set; }
