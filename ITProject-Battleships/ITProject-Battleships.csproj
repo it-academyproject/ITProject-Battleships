@@ -5,5 +5,9 @@
     <RootNamespace>ITProject_Battleships</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\Enums\" />
+  </ItemGroup>
+
 
 </Project>
