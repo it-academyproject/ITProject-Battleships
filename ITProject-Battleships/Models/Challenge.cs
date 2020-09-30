@@ -11,9 +11,9 @@ namespace ITProject_Battleships.Models
         [Key]
         public int ChallengeId { get; set; }
 
-        public int ChallengingId { get; set; }
+        public int PlayerId1 { get; set; }
 
-        public int ChallengedId { get; set; }
+        public int PlayerId2 { get; set; }
 
         public DateTime ChallengeMoment { get; set; }
 
