@@ -14,7 +14,7 @@ namespace ITProject_Battleships.Models
 
         public ShipType ShipType { get; set; }
 
-        public string Orientation { get; set; }
+        public Orientation Orientation { get; set; }
 
         public int PositionX { get; set; }
 
