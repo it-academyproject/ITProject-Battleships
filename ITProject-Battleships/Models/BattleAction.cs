@@ -8,7 +8,6 @@ namespace ITProject_Battleships.Models
 {
     public class BattleAction
     {
-        [Key]
         public int BattleActionId { get; set; }
 
         public int PositionX { get; set; }
