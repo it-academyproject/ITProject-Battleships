@@ -22,50 +22,12 @@ namespace ITProject_Battleships.Data
                 if (dbNotExisting)
                 {
                     // Adds some data
-                    var battleFields = AddBattleField();
+                    var battleFields = new BattleFieldData().Get();
                     context.BattleFields.AddRange(battleFields);
                 }
                 // Saves changes
                 context.SaveChanges();
             }
-        }
-
-        public static List<BattleField> AddBattleField()
-        {
-            var list = new List<BattleField>();
-            list.Add(new BattleField
-            {   
-                //Id = 1,   // filled in automatically if not assigned
-                Name = "Mediterranean Sea",
-                Height = 20,
-                Width = 20,
-            });
-
-            list.Add(new BattleField
-            {   
-                //Id = 2,   // filled in automatically if not assigned
-                Name = "Atlantic Sea",
-                Height = 40,
-                Width = 40,
-            });
-
-            list.Add(new BattleField
-            {   
-                //Id = 3,   // filled in automatically if not assigned
-                Name = "North Sea",
-                Height = 10,
-                Width = 25,
-            });
-
-            list.Add(new BattleField
-            {   
-                //Id = 4,   // filled in automatically if not assigned
-                Name = "Atlantis",
-                Height = 15,
-                Width = 10,
-            });
-
-            return list;
         }
     }
 }
