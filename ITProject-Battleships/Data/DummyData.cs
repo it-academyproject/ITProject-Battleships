@@ -96,7 +96,7 @@ namespace ITProject_Battleships.Data
                 BattlesLost = 0;
                 BattlesDraw = 0;
                 ProfilePicture = "http=battleships/users/players/profiles/player4.jpg";
-                Description = "Player 4 dummy date";
+                Description = "Player 4 dummy data";
                 Challenges = new List<Challenges>;
             });
 
