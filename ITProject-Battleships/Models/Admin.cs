@@ -8,7 +8,6 @@ namespace ITProject_Battleships.Models
 {
     public class Admin
     {
-        [Key]
         public int AdminId { get; set; }
 
         public string Email { get; set; }
