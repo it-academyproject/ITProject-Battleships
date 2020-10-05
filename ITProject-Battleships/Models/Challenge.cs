@@ -23,9 +23,15 @@ namespace ITProject_Battleships.Models
 
         public int TurnsNumbers { get; set; }
 
-        public virtual Player Player1 { get; set; }
+        public List<PlayerChallenge> PlayerChallenges { get; set; }
 
-        public virtual Player Player2 { get; set; }
+
+        // This two lines give the error " Unable to determine the relationship represented by navigation property 'Challenge.Player' " when i try to make add-migration,
+        // becose efcore dont support many to many relationshups, so we are going to use the prop above, to list PlayerChallenges to access to the players
+
+        //public virtual Player Player1 { get; set; }
+
+        //public virtual Player Player2 { get; set; }
 
     }
 }

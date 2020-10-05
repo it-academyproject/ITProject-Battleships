@@ -8,7 +8,6 @@ namespace ITProject_Battleships.Models
 {
     public class BattleField
     {
-        [Key]
         public int BattleFieldId { get; set; }
 
         public string Name { get; set; }
