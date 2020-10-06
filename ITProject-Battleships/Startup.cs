@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ITProject_Battleships.Data;
 using ITProject_Battleships.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -51,6 +52,7 @@ namespace ITProject_Battleships
               {
                   endpoints.MapControllers ();
               } );
+            AdminData.Test(app);
         }
     }
 }
