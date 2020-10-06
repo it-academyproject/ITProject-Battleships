@@ -13,6 +13,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
+using ITProject_Battleships.Data;
+
 namespace ITProject_Battleships
 {
     public class Startup
@@ -51,6 +53,8 @@ namespace ITProject_Battleships
               {
                   endpoints.MapControllers ();
               } );
+
+            DummyData.Test(app); //remove when not testing
         }
     }
 }
