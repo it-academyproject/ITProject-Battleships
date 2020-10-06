@@ -31,6 +31,8 @@ namespace ITProject_Battleships
 
             services.AddDbContext<BattleContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("ConnStr")));
+
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,6 +42,11 @@ namespace ITProject_Battleships
             {
                 app.UseDeveloperExceptionPage ();
             }
+
+            app.UseCors(builder =>
+            builder.AllowAnyOrigin()
+            .AllowAnyHeader()
+            .AllowAnyMethod());
 
             app.UseHttpsRedirection ();
 

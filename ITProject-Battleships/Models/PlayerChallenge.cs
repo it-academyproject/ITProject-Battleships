@@ -12,5 +12,6 @@ namespace ITProject_Battleships.Models
         public int PlayerChallengeId { get; set; }
         public Player Player { get; set; }
         public Challenge Challenge { get; set; }
+        public bool IsChallenger { get; set; }
     }
 }
