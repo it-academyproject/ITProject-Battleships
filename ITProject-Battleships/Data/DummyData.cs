@@ -28,20 +28,18 @@ namespace ITProject_Battleships.Data
                 //if (dbNotExisting || context.BattleFields == null || !context.BattleFields.Any())
 
                 // Suggestion to use just this (and the previous comments may be deleted)
-                if (!context.BattleFields.Any()) // Adds some data
+                if (!context.BattleFields.Any()) context.BattleFields.AddRange(new BattleFieldData().Get());
+
+                //if (!context.Admins.Any()) context.Admins.AddRange(new AdminData().Get());
+                //if (!context.Players.Any()) context.Players.AddRange(new PlayerData().Get());
+                if (!context.Armies.Any())
                 {
-                    var battleFields = new BattleFieldData().Get();
-                    context.BattleFields.AddRange(battleFields);
+                    // // needs the battlefield to be created
+                    var battleFields = context.BattleFields.ToList();
+                    context.Armies.AddRange(new ArmyData().Get(battleFields));
                 }
+                // ...
 
-                //if (!context.Admins.Any())
-                //{
-                //    var admins = new AdminData().Get();
-                //    context.Admins.AddRange(admins);
-
-                //    // or in just one line
-                //    // context.Admins.AddRange(new AdminData().Get());
-                //}
                 // Saves changes
                 context.SaveChanges();
             }
