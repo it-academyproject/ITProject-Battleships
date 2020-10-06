@@ -8,21 +8,11 @@ namespace ITProject_Battleships.Models
 {
     public class Challenge
     {
-        [Key]
         public int ChallengeId { get; set; }
-
-        public int PlayerId1 { get; set; }
-
-        public int PlayerId2 { get; set; }
-
         public DateTime ChallengeMoment { get; set; }
-
         public DateTime ResolutionMoment { get; set; }
-
         public bool Resolution { get; set; }
-
         public int TurnsNumbers { get; set; }
-
         public List<PlayerChallenge> PlayerChallenges { get; set; }
 
 

@@ -4,14 +4,16 @@ using ITProject_Battleships.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ITProject_Battleships.Migrations
 {
     [DbContext(typeof(BattleContext))]
-    partial class BattleContextModelSnapshot : ModelSnapshot
+    [Migration("20201006111241_Army-Add-Ships")]
+    partial class ArmyAddShips
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
