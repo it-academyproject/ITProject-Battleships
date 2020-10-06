@@ -8,7 +8,6 @@ namespace ITProject_Battleships.Models
 {
     public class Battle
     {
-        [Key]
         public int BattleId { get; set; }
 
         public DateTime BattleBegin { get; set; }
@@ -22,8 +21,6 @@ namespace ITProject_Battleships.Models
         public int Score2 { get; set; }
 
         public virtual int ChallengeId { get; set; }
-
-        public virtual int BattleFieldId { get; set; }
 
         public virtual int ArmyId { get; set; }
 
