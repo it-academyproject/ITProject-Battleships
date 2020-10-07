@@ -2,18 +2,25 @@
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace ITProject_Battleships.Data.Repositories
 {
-    public class GenericRepository<TEntity, TContext> : IRepository<TEntity>
+    public abstract class GenericRepository<TEntity, TContext> : IRepository<TEntity>
         where TEntity : class, IEntity
         where TContext : DbContext
     {
-        public Task<TEntity> Add ( TEntity entity )
+        private readonly TContext context;
+
+        public GenericRepository (TContext context )
         {
-            throw new NotImplementedException ();
+            this.context = context;
+        }
+        public async Task<TEntity> Add ( TEntity entity )
+        {
+            context.Set<TEntity> ().Add ( entity );
+            await context.SaveChangesAsync ();
+            return entity;
         }
 
         public Task<TEntity> Get ( int id )
@@ -31,9 +38,17 @@ namespace ITProject_Battleships.Data.Repositories
             throw new NotImplementedException ();
         }
 
-        public Task<TEntity> Update ( int id )
+        public async Task<TEntity> Delete ( int id )
         {
-            throw new NotImplementedException ();
+            var entity = await context.Set<TEntity> ().FindAsync ( id );
+            if(entity == null)
+            {
+                return entity;
+            }
+
+            context.Set<TEntity> ().Remove ( entity );
+            await context.SaveChangesAsync ();
+            return entity;
         }
     }
 }
