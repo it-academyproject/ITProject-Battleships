@@ -23,14 +23,14 @@ namespace ITProject_Battleships.Data.Repositories
             return entity;
         }
 
-        public Task<TEntity> Get ( int id )
+        public async Task<TEntity> Get ( int id )
         {
-            throw new NotImplementedException ();
+            return await context.Set<TEntity> ().FindAsync ( id );
         }
 
-        public Task<List<TEntity>> GetAll ( )
+        public async Task<List<TEntity>> GetAll ( )
         {
-            throw new NotImplementedException ();
+            return await context.Set<TEntity> ().ToListAsync ();
         }
 
         public Task<TEntity> Update ( TEntity entity )
