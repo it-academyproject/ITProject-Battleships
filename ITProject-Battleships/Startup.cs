@@ -59,7 +59,8 @@ namespace ITProject_Battleships
               {
                   endpoints.MapControllers ();
               } );
-            AdminData.Test(app);
+            //AdminData.Test(app);
+            DummyData.Test(app);
         }
     }
 }

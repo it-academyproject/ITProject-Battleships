@@ -10,7 +10,8 @@ namespace ITProject_Battleships.Data
 {
     public class DummyDataPlayer
     {
-        public List<Player> Get(List<Challenge> challenges)
+        //public List<Player> Get(List<Challenge> challenges)
+        public List<Player> Get()
         {
             var list = new List<Player>();
             list.Add(new Player()
@@ -25,7 +26,7 @@ namespace ITProject_Battleships.Data
                 BattlesDraw = 0,
                 ProfilePicture = "http=battleships/users/players/profiles/player1.jpg",
                 Description = "Player 1 dummy data",
-                Challenges = new List<Challenge>()
+                //Challenges = new List<Challenge>()
             });
 
             list.Add(new Player()
@@ -40,7 +41,7 @@ namespace ITProject_Battleships.Data
                 BattlesDraw = 1,
                 ProfilePicture = "http=battleships/users/players/profiles/player2.jpg",
                 Description = "Player 2 dummy data",
-                Challenges = new List<Challenge>()
+                //Challenges = new List<Challenge>()
             });
 
             list.Add(new Player()
@@ -55,7 +56,7 @@ namespace ITProject_Battleships.Data
                 BattlesDraw = 0,
                 ProfilePicture = "",
                 Description = "Player 3 dummy data",
-                Challenges = new List<Challenge>()
+                //Challenges = new List<Challenge>()
             });
 
             list.Add(new Player()
@@ -70,7 +71,7 @@ namespace ITProject_Battleships.Data
                 BattlesDraw = 0,
                 ProfilePicture = "http=battleships/users/players/profiles/player4.jpg",
                 Description = "Player 4 dummy data",
-                Challenges = new List<Challenge>()
+                //Challenges = new List<Challenge>()
             });
 
             return list;                
