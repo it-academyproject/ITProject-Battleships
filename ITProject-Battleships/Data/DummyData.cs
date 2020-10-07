@@ -42,6 +42,20 @@ namespace ITProject_Battleships.Data
 
                 // Saves changes
                 context.SaveChanges();
+
+                //============Player Test
+                if (!context.Players.Any())
+                {
+                    // // needs the battlefield to be created
+                    //var challenges = context.Challenges.ToList();
+                    context.Players.AddRange(new DummyDataPlayer().Get());
+                    context.SaveChanges();
+                }
+                // ...
+
+                // Saves changes
+                context.SaveChanges();
+                //=======================
             }
         }
     }
