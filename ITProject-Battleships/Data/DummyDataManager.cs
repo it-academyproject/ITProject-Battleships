@@ -9,7 +9,7 @@ using ITProject_Battleships.Models;
 
 namespace ITProject_Battleships.Data
 {
-    class DummyData
+    class DummyDataManager
     {
         public static void Test(IApplicationBuilder app)
         {
