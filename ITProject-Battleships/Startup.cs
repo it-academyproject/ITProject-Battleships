@@ -16,6 +16,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System.Text;
+using ITProject_Battleships.Data.Repositories;
 
 namespace ITProject_Battleships
 {
@@ -53,6 +54,8 @@ namespace ITProject_Battleships
 
             services.AddDbContext<BattleContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("ConnStr")));
+
+            services.AddScoped<AdminRepository> ();
 
             services.AddCors();
         }
