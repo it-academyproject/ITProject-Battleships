@@ -13,6 +13,5 @@ namespace ITProject_Battleships.Data
         Task<T> Add ( T entity );
         Task<T> Update ( T entity );
         Task<T> Update ( int id );
-
     }
 }
