@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using ITProject_Battleships.Models;
 
 namespace ITProject_Battleships.Data
 {
-    class DummyDataManager
+    class DummyData
     {
         public static void Test(IApplicationBuilder app)
         {
@@ -28,10 +28,22 @@ namespace ITProject_Battleships.Data
                 //if (dbNotExisting || context.BattleFields == null || !context.BattleFields.Any())
 
                 // Suggestion to use just this (and the previous comments may be deleted)
-                //if (!context.Challenges.Any()) context.Challenges.AddRange(new ChallengeData().Get());
-
+                if (!context.BattleFields.Any()) context.BattleFields.AddRange(new BattleFieldData().Get());
+                context.SaveChanges();
                 //if (!context.Admins.Any()) context.Admins.AddRange(new AdminData().Get());
                 //if (!context.Players.Any()) context.Players.AddRange(new PlayerData().Get());
+                if (!context.Armies.Any())
+                {
+                    // // needs the battlefield to be created
+                    var battleFields = context.BattleFields.ToList();
+                    context.Armies.AddRange(new ArmyData().Get(battleFields));
+                }
+                // ...
+
+                // Saves changes
+                context.SaveChanges();
+
+                //============Player Test
                 if (!context.Players.Any())
                 {
                     // // needs the battlefield to be created
@@ -43,6 +55,7 @@ namespace ITProject_Battleships.Data
 
                 // Saves changes
                 context.SaveChanges();
+                //=======================
             }
         }
     }
