@@ -8,7 +8,7 @@ namespace ITProject_Battleships.Data.Repositories
 {
     public class GenericRepository<TEntity, TContext> : IRepository<TEntity>
         where TEntity : class, IEntity
-        where TContext : DbContext
+        //where TContext : DbContext
     {
         public Task<TEntity> Add ( TEntity entity )
         {
