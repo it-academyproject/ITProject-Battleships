@@ -29,7 +29,7 @@ namespace ITProject_Battleships.Data
 
                 // Suggestion to use just this (and the previous comments may be deleted)
                 if (!context.BattleFields.Any()) context.BattleFields.AddRange(new BattleFieldData().Get());
-
+                context.SaveChanges();
                 //if (!context.Admins.Any()) context.Admins.AddRange(new AdminData().Get());
                 //if (!context.Players.Any()) context.Players.AddRange(new PlayerData().Get());
                 if (!context.Armies.Any())
