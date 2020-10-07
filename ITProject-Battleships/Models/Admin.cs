@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace ITProject_Battleships.Models
 {
-    public class Admin
+    public class Admin : IEntity
     {
-        public int AdminId { get; set; }
+        public int Id { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
         public DateTime CreatedUserData { get; set; }
         public DateTime LastLogin { get; set; }
-
+        
     }
 }
