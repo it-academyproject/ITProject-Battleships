@@ -33,9 +33,11 @@ namespace ITProject_Battleships.Data.Repositories
             return await context.Set<TEntity> ().ToListAsync ();
         }
 
-        public Task<TEntity> Update ( TEntity entity )
+        public async Task<TEntity> Update ( TEntity entity )
         {
-            throw new NotImplementedException ();
+            context.Entry ( entity ).State = EntityState.Modified;
+            await context.SaveChangesAsync ();
+            return entity;
         }
 
         public async Task<TEntity> Delete ( int id )
