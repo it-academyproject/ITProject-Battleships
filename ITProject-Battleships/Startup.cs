@@ -60,7 +60,7 @@ namespace ITProject_Battleships
                   endpoints.MapControllers ();
               } );
             //AdminData.Test(app);
-            DummyDataManager.Test(app);
+            DummyData.Test(app);
         }
     }
 }
