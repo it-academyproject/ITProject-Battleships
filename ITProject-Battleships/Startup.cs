@@ -18,6 +18,8 @@ using Microsoft.Extensions.Logging;
 using System.Text;
 using ITProject_Battleships.Data.Repositories;
 
+using ITProject_Battleships.Data;
+
 namespace ITProject_Battleships
 {
     public class Startup
@@ -85,7 +87,10 @@ namespace ITProject_Battleships
               {
                   endpoints.MapControllers ();
               } );
+
+
             AdminData.Test(app);
+            DummyData.Test(app); //remove when not testing
         }
     }
 }
