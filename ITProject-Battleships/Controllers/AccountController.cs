@@ -26,8 +26,10 @@ namespace ITProject_Battleships.Controllers
             _config = config;
         }
 
+        //Endpoint https://localhost:44355/api/account
         [AllowAnonymous]
         [HttpPost]
+
         public IActionResult Login( [FromBody] UserModel login )
         {
             IActionResult response = Unauthorized ();
