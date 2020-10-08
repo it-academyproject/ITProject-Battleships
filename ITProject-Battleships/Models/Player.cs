@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ITProject_Battleships.Models
 {
-    public class Player
+    public class Player: IEntity
     {
-        public int PlayerId { get; set; }
+        public int Id { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
         public DateTime CreatedUserData { get; set; }
