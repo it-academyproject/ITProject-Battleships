@@ -19,6 +19,6 @@ namespace ITProject_Battleships.Models
         public int BattlesDraw { get; set; }
         public string ProfilePicture { get; set; }
         public string Description { get; set; }
-        public virtual List<Challenge> Challenges { get; set; }
+        public virtual List<PlayerChallenge> Challenges { get; set; }
     }
 }
