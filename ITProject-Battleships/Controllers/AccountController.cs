@@ -20,15 +20,13 @@ namespace ITProject_Battleships.Controllers
     public class AccountController : ControllerBase
     {
         private IConfiguration _config;
+ 
         public AccountController(IConfiguration config )
         {
             _config = config;
         }
 
         [AllowAnonymous]
-        [HttpPost]
-
-
         [HttpPost]
         public IActionResult Login( [FromBody] UserModel login )
         {
@@ -57,7 +55,8 @@ namespace ITProject_Battleships.Controllers
             };
 
 
-            var token = new JwtSecurityToken ( _config["Jwt:Issuer"],
+            var token = new JwtSecurityToken ( 
+                _config["Jwt:Issuer"],
                 _config["Jwt:Issuer"],
                 Claims,
                 expires: DateTime.Now.AddMinutes ( 120 ),
@@ -72,16 +71,24 @@ namespace ITProject_Battleships.Controllers
 
             //Validate User credentials
 
-            if(login.Email == "email.com")
+            if(login.Email == "battle")
             {
                 user = new UserModel
                 {
-                    Email = "email.com",
-                    Password = "0000"
+                    Email = "battle",
+                    Password = "xecretKeywqejane"
                 };
             }
             return user;
         }
 
+ 
+        [HttpGet]
+        [Authorize]
+        public ActionResult<IEnumerable<string>> Get ( )
+        {
+            return new string[] { "Value 1", "Value 2", "Value 3", };
+        }
+       
     }
 }
