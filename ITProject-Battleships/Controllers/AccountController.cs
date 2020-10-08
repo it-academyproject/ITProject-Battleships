@@ -20,7 +20,6 @@ namespace ITProject_Battleships.Controllers
     public class AccountController : ControllerBase
     {
         private IConfiguration _config;
- 
         public AccountController(IConfiguration config )
         {
             _config = config;
@@ -49,13 +48,11 @@ namespace ITProject_Battleships.Controllers
             var securityKey = new SymmetricSecurityKey ( Encoding.UTF8.GetBytes ( _config["Jwt:Key"] ) );
             var credentials = new SigningCredentials ( securityKey, SecurityAlgorithms.HmacSha256 );
 
-
             var Claims = new[]
             {
                 new Claim(JwtRegisteredClaimNames.Email, userInfo.Email),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             };
-
 
             var token = new JwtSecurityToken ( 
                 _config["Jwt:Issuer"],
@@ -72,7 +69,6 @@ namespace ITProject_Battleships.Controllers
             UserModel user = null;
 
             //Validate User credentials
-
             if(login.Email == "battle")
             {
                 user = new UserModel
@@ -84,7 +80,7 @@ namespace ITProject_Battleships.Controllers
             return user;
         }
 
- 
+        // method created to testing web api
         [HttpGet]
         [Authorize]
         public ActionResult<IEnumerable<string>> Get ( )
