@@ -58,6 +58,7 @@ namespace ITProject_Battleships
                 options.UseSqlServer(Configuration.GetConnectionString("ConnStr")));
 
             services.AddScoped<AdminRepository> ();
+            services.AddScoped<BattleFieldRepository>();
 
             services.AddCors();
         }

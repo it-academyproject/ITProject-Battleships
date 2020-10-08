@@ -13,10 +13,10 @@ namespace ITProject_Battleships.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BattleFieldController : GenericController<BattleField, BattleFieldRepository>
+    public class BattleFieldsController : GenericController<BattleField, BattleFieldRepository>
     {
 
-        public BattleFieldController(BattleFieldRepository repository) : base(repository)
+        public BattleFieldsController(BattleFieldRepository repository) : base(repository)
         {
 
         }
