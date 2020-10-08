@@ -12,7 +12,7 @@ namespace ITProject_Battleships.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AdminsController : BattleController<Admin, AdminRepository>
+    public class AdminsController : GenericController<Admin, AdminRepository>
     {
 
         public AdminsController(AdminRepository repository) : base(repository)

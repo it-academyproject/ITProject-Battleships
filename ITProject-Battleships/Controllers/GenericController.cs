@@ -11,13 +11,13 @@ namespace ITProject_Battleships.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public abstract class BattleController<TEntity, TRepository> : ControllerBase
+    public abstract class GenericController<TEntity, TRepository> : ControllerBase
          where TEntity : class, IEntity
          where TRepository : IRepository<TEntity>
     {
         private readonly TRepository repository;
 
-        public BattleController(TRepository repository)
+        public GenericController(TRepository repository)
         {
             this.repository = repository;
         }
