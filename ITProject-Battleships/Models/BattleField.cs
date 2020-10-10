@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ITProject_Battleships.Models
 {
-    public class BattleField
+    public class BattleField: IEntity
     {
-        public int BattleFieldId { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public double Height { get; set; }
         public double Width { get; set; }
