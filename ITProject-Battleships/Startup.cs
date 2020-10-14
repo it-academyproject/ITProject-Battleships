@@ -18,7 +18,6 @@ using Microsoft.Extensions.Logging;
 using System.Text;
 using ITProject_Battleships.Data.Repositories;
 
-using ITProject_Battleships.Data;
 
 namespace ITProject_Battleships
 {

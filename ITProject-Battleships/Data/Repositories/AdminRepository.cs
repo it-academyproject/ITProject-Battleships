@@ -1,4 +1,5 @@
 ﻿using ITProject_Battleships.Models;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,7 @@ namespace ITProject_Battleships.Data.Repositories
 {
     public class AdminRepository : GenericRepository<Admin, BattleContext>, IAdminRepository
     {
+
         private readonly BattleContext _context;
         public AdminRepository (BattleContext context ) : base(context)
         {
@@ -36,5 +38,9 @@ namespace ITProject_Battleships.Data.Repositories
         {
             return (_context.SaveChanges() >= 0);
         }
+
+        // We can add new method specific to the admin repository
+
+
     }
 }
