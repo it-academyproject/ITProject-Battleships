@@ -58,6 +58,11 @@ namespace ITProject_Battleships
 
             services.AddScoped<AdminRepository> ();
 
+            services.AddScoped<PlayerRepository>();
+
+            services.AddScoped<BattleFieldRepository>();
+
+
             services.AddCors();
         }
 

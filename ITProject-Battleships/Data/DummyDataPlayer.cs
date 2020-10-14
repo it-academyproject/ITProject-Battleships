@@ -71,7 +71,7 @@ namespace ITProject_Battleships.Data
                 BattlesDraw = 0,
                 ProfilePicture = "http=battleships/users/players/profiles/player4.jpg",
                 Description = "Player 4 dummy data",
-                //Challenges = new List<Challenge>()
+                //Challenges = new List<PlayerChallenge>()
             });
 
             return list;                
