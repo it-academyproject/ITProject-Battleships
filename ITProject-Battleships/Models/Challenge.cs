@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ITProject_Battleships.Models
 {
-    public class Challenge
+    public class Challenge : IEntity
     {
-        public int ChallengeId { get; set; }
+        public int Id { get; set; }
         public DateTime ChallengeMoment { get; set; }
         public DateTime ResolutionMoment { get; set; }
         public bool Resolution { get; set; }
